@@ -112,4 +112,14 @@ public class MusicOrganizer
             System.out.println("El archivo no existe");
         }
     }
+
+    public void playMusic(String artista)
+    {
+        for (String buscar : files) {
+            if (buscar.contains(artista))
+            {
+               player.playSample(buscar); 
+            }
+        }
+    }
 }
