@@ -82,7 +82,7 @@ public class MusicOrganizer
     {
         player.stop();
     }
-    
+
     /**
      * realiza una impresion del listado de las canciones guardadas
      */
@@ -93,6 +93,18 @@ public class MusicOrganizer
         {
             System.out.println(count + ".-" +fileName);
             count++;
+        }
+    }
+
+    /**
+     * 
+     */
+    public void listMaching(String searchString)
+    {
+        for (String filename : files) {
+            if (filename.contains(searchString)){
+                System.out.println(filename);
+            }
         }
     }
 }
