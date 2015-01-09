@@ -105,10 +105,11 @@ public class MusicOrganizer
             if (filename.contains(searchString)){
                 System.out.println(filename);
             }
-            else
-            {
-                System.out.println("El archivo no existe.");
-            }
+        }
+
+        if (!files.contains(searchString))
+        {
+            System.out.println("El archivo no existe");
         }
     }
 }
