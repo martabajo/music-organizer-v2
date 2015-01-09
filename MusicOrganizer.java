@@ -101,13 +101,15 @@ public class MusicOrganizer
      */
     public void listMaching(String searchString)
     {
+        boolean existeCancion = false;
         for (String filename : files) {
             if (filename.contains(searchString)){
                 System.out.println(filename);
+                existeCancion = true;
             }
         }
 
-        if (!files.contains(searchString))
+        if (existeCancion == false)
         {
             System.out.println("El archivo no existe");
         }
