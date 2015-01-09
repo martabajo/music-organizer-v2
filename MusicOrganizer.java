@@ -97,13 +97,17 @@ public class MusicOrganizer
     }
 
     /**
-     * 
+     * Metodo listMaching
      */
     public void listMaching(String searchString)
     {
         for (String filename : files) {
             if (filename.contains(searchString)){
                 System.out.println(filename);
+            }
+            else
+            {
+                System.out.println("El archivo no existe.");
             }
         }
     }
