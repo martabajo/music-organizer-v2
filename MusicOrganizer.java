@@ -129,21 +129,22 @@ public class MusicOrganizer
     {
         int index = 0;
         boolean found = false;
-        while (!found && index < files.size())
+        int sizeArray = files.size(); //segunda parte del ejercicio, crear una variable local.
+        while(!found && index < sizeArray)
         {
-            String fileName = files.get(index);
-            if(fileName.contains(searchString))
+            String fileName = files.get(index); //variable local
+            if(fileName.contains(searchString)) 
             {
                 found = true;
             }
             else
             {
-                index++;
+                index = index + 1;
             }
         }
         if(!found)
         {
-            index = -1;
+            index = index - 1;
         }
         return index;
     }
