@@ -120,8 +120,31 @@ public class MusicOrganizer
         for (String buscar : files) {
             if (buscar.contains(artista))
             {
-               player.playSample(buscar); 
+                player.playSample(buscar); 
             }
         }
+    }
+
+    public int findFirst(String searchString)
+    {
+        int index = 0;
+        boolean found = false;
+        while (!found && index < files.size())
+        {
+            String fileName = files.get(index);
+            if(fileName.contains(searchString))
+            {
+                found = true;
+            }
+            else
+            {
+                index++;
+            }
+        }
+        if(!found)
+        {
+            index = -1;
+        }
+        return index;
     }
 }
